@@ -12,6 +12,10 @@
     <app-footer></app-footer>
     <app-footer2></app-footer2>
   </div>
+  <div id="app2">
+    <app-header></app-header>
+    <app-footer2></app-footer2>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     // 전역 컴포넌트 들이당
@@ -31,6 +35,9 @@
         }
       }
     });
+    new Vue({
+      el: '#app2',
+    })
   </script>
 </body>
 </html>
