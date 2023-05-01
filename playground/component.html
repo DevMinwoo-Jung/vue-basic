@@ -10,9 +10,11 @@
   <div id="app">
     <app-header></app-header>
     <app-footer></app-footer>
+    <app-footer2></app-footer2>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
+    // 전역 컴포넌트 들이당
     Vue.component('app-header', {
       template: '<h1>Header</h1>'
     })
@@ -22,7 +24,12 @@
 
     new Vue({
       el: '#app',
-
+      // 지역 컴포넌트 등록 방식...!
+      components: {
+        'app-footer2': {
+          template: '<footer>나는 시맨틱 푸터!</footer>'
+        }
+      }
     });
   </script>
 </body>
